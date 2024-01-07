@@ -141,53 +141,178 @@
 
         </div>
     </div>
+    <br>
+    <section>
+        <div class="bg-transparent text-gray-400 text-xs font-sans box-border p-0 m-0 mx-auto block clear-both w-full md:w-[1188px] mt-6 pt-0">
+            <div class="p-0">
+              <ul class="list-none m-0 p-0 flex justify-between">
+                <li class="flex items-center">
+                  <span class="inline-block">
+                    <img src="//icms-image.slatic.net/images/ims-web/55c642f0-250b-4515-9c8a-42cce3327098.png" alt="">
+                  </span>
+                  <a href="#" class="text-gray-400 no-underline hover:no-underline ml-2">
+                    Safe Payments
+                  </a>
+                </li>
+                <li class="flex items-center">
+                  <span class="inline-block">
+                    <img src="//icms-image.slatic.net/images/ims-web/1b7e5ccb-89fc-4383-bc27-4586e82195be.png" alt="">
+                  </span>
+                  <a href="#" class="text-gray-400 no-underline hover:no-underline ml-2">
+                    Nationwide Delivery
+                  </a>
+                </li>
+                <li class="flex items-center">
+                  <span class="inline-block">
+                    <img src="//icms-image.slatic.net/images/ims-web/f2a7f550-3a25-478d-9879-e6aa419c7ebf.png" alt="">
+                  </span>
+                  <a href="#" class="text-gray-400 no-underline hover:no-underline ml-2">
+                    Free & Easy Returns
+                  </a>
+                </li>
+                <li class="flex items-center">
+                  <span class="inline-block">
+                    <img src="//icms-image.slatic.net/images/ims-web/05352646-9b19-4283-a7b1-dcb16736663e.png" alt="">
+                  </span>
+                  <a href="#" class="text-gray-400 no-underline hover:no-underline ml-2">
+                    Best Price Guaranteed
+                  </a>
+                </li>
+                <li class="flex items-center">
+                  <span class="inline-block">
+                    <img src="//icms-image.slatic.net/images/ims-web/781b5194-65f0-4ae5-b7a6-003bc717054f.png" alt="">
+                  </span>
+                  <a href="#" class="text-gray-400 no-underline hover:no-underline ml-2">
+                    100% Authentic Products
+                  </a>
+                </li>
+                {{-- <li class="flex items-center">
+                  <span class="inline-block">
+                    <img src="{{ asset('images/logo24px.png') }}" alt="">
+                  </span>
+                  <a href="#" class="text-gray-400 no-underline hover:no-underline ml-2">
+                    craftsHub Verified
+                  </a>
+                </li> --}}
+              </ul>
+            </div>
+          </div>                                       
+    </section>
 
-    <!--	 
+    <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+        <nav id="store" class="w-full z-30 top-0 px-6 py-1">
+            <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">Categories</a>
 
-Alternatively if you want to just have a single hero
+                <div class="flex items-center" id="store-nav-content">
+                    <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                        <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
+                        </svg>
+                    </a>
+                    <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                        <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                        </svg>
+                    </a>
+                </div>
 
-<section class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right" style="max-width:1600px; height: 32rem; background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+          </div>
+        </nav>
+        <!-- Product Category 1 -->
+        <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+        <a href="#" class="no-underline hover:no-underline">
+            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 1">
+            <div class="pt-3 flex items-center justify-between">
+            <p class="text-gray-900">Crafts</p>
+            <!-- Icon or badge here -->
+            </div>
+            <p class="pt-1 text-gray-600">Explore Crafts</p>
+        </a>
+        </div>
+    
+        <!-- Product Category 2 -->
+        <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+        <a href="#" class="no-underline hover:no-underline">
+            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1508423134147-addf71308178?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 2">
+            <div class="pt-3 flex items-center justify-between">
+            <p class="text-gray-900">Jewelry</p>
+            <!-- Icon or badge here -->
+            </div>
+            <p class="pt-1 text-gray-600">Discover Jewelry</p>
+        </a>
+        </div>
+    
+        <!-- Product Category 3 -->
+        <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+        <a href="#" class="no-underline hover:no-underline">
+            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <div class="pt-3 flex items-center justify-between">
+            <p class="text-gray-900">Home Decor</p>
+            <!-- Icon or badge here -->
+            </div>
+            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+        </a>
+        </div>
+    
+        <!-- Product Category 4 -->
+        <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <a href="#" class="no-underline hover:no-underline">
+            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <div class="pt-3 flex items-center justify-between">
+                <p class="text-gray-900">Home Decor</p>
+                <!-- Icon or badge here -->
+            </div>
+            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            </a>
+        </div>
+        
+        <!-- Product Category 5 -->
+        <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <a href="#" class="no-underline hover:no-underline">
+            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <div class="pt-3 flex items-center justify-between">
+                <p class="text-gray-900">Home Decor</p>
+                <!-- Icon or badge here -->
+            </div>
+            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            </a>
+        </div>
 
-	<div class="container mx-auto">
-
-		<div class="flex flex-col w-full lg:w-1/2 justify-center items-start  px-6 tracking-wide">
-			<h1 class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</h1>
-			<a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">products</a>
-
-		</div>
-
-	  </div>
-
-</section>
-
--->
+        <!-- Product Category 6 -->
+        <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <a href="#" class="no-underline hover:no-underline">
+            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <div class="pt-3 flex items-center justify-between">
+                <p class="text-gray-900">Home Decor</p>
+                <!-- Icon or badge here -->
+            </div>
+            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            </a>
+        </div>
+    </div>
+  
 
     <section class="bg-white py-8">
 
         <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-
             <nav id="store" class="w-full z-30 top-0 px-6 py-1">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-
-                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
-				Store
-			</a>
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">Featured Products</a>
 
                     <div class="flex items-center" id="store-nav-content">
-
                         <a class="pl-3 inline-block no-underline hover:text-black" href="#">
                             <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
                             </svg>
                         </a>
-
                         <a class="pl-3 inline-block no-underline hover:text-black" href="#">
                             <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
                             </svg>
                         </a>
-
                     </div>
+
               </div>
             </nav>
 
@@ -303,15 +428,17 @@ Alternatively if you want to just have a single hero
 
         <div class="container py-8 px-6 mx-auto">
 
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
-			About
-		</a>
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">About</a>
+            <br>
+            <br>
+            <p class="mb-8">
+                LocalCrafts Hub is a dynamic mobile application and online marketplace that passionately connects local artisans and crafters with enthusiasts and customers who value creativity and originality. At the heart of our mission lies a commitment to community engagement and the promotion of sustainable commerce.
 
-            <p class="mt-8 mb-8">This template is inspired by the stunning nordic minimalist design - in particular:
-                <br>
-                <a class="text-gray-800 underline hover:text-gray-900" href="http://savoy.nordicmade.com/" target="_blank">Savoy Theme</a> created by <a class="text-gray-800 underline hover:text-gray-900" href="https://nordicmade.com/">https://nordicmade.com/</a> and <a class="text-gray-800 underline hover:text-gray-900" href="https://www.metricdesign.no/" target="_blank">https://www.metricdesign.no/</a></p>
-
-            <p class="mb-8">Lorem ipsum dolor sit amet, consectetur <a href="#">random link</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis mattis aliquam. In est ante in nibh mauris. Egestas congue quisque egestas diam in. Facilisi nullam vehicula ipsum a arcu. Nec nam aliquam sem et tortor consequat. Eget mi proin sed libero enim sed faucibus turpis in. Hac habitasse platea dictumst quisque. In aliquam sem fringilla ut. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Accumsan lacus vel facilisis volutpat est velit egestas dui id. At tempor commodo ullamcorper a. Volutpat commodo sed egestas egestas fringilla. Vitae congue eu consequat ac.</p>
+                We believe in the power of local craftsmanship and the unique stories behind each creation. By bringing these artisans to a wider audience, we aim to not only showcase their talents but also sustain the rich cultural heritage they represent.
+                <br><br>
+                Our platform is more than just a marketplace; it's a comprehensive ecosystem equipped with a Customer Relationship Management (CRM) system. This system streamlines the management of customer and vendor interactions, orders, and a diverse range of product offerings. It ensures a seamless and efficient experience for both artisans and their customers.
+                
+                Join us at LocalCrafts Hub, where each purchase is a step towards nurturing the local craft community and preserving the artistry and skills that make each piece unique.</p>
 
         </div>
 

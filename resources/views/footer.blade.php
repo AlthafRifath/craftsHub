@@ -6,7 +6,9 @@
         <div class="px-3 md:px-0">
           <h3 class="font-bold text-gray-900">About</h3>
           <p class="py-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
+            Experience the unique and vibrant world of local artisanship with craftsHub, Sri Lanka’s premier online marketplace for artisanal and handcrafted products. 
+            At craftsHub, we take pride in showcasing a diverse range of genuine, high-quality items created by skilled local artisans and crafters from across the country. 
+            Our platform is dedicated to bringing the richness of Sri Lankan craftsmanship right to your doorstep.
           </p>
         </div>
       </div>
