@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+{{-- <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -216,4 +216,62 @@
             </div>
         </div>
     </div>
+</nav> --}}
+
+<nav id="header" class="w-full z-30 top-0 py-1 bg-white">
+    <div class="w-full container mx-auto flex items-center justify-between px-6 py-3">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="#" class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl">
+                <img class="fill-current text-gray-800 mr-2" src="{{ asset('images/logoBlack.png') }}" alt="Your Logo" width="100" height="100">
+            </a>
+        </div>
+
+        <!-- Menus -->
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+            <nav>
+                <ul class="md:flex items-center justify-center text-base text-gray-700 pt-4 md:pt-0">
+
+                    <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Home</a></li>
+
+                    <li class="group">
+                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Shop</a>
+                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
+                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Categories</a></li>
+                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">New Arrivals</a></li>
+                            <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Featured Artisans</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="group">
+                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Artisans</a>
+                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
+                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Meet the Artisans</a></li>
+                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Become an Artisan</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Login and Register -->
+        <div class="flex items-center">
+            @if (Route::has('login'))
+                <div class="sm:top-0 sm:right-0 p-6 text-right z-10">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Log in</a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+        </div>
+    </div>
 </nav>
+
+

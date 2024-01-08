@@ -10,11 +10,17 @@
         </label>
         <input class="hidden" type="checkbox" id="menu-toggle" />
 
+        <div class="order-1 md:order-2">
+            <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
+                <img class="fill-current text-gray-800 mr-2" src="{{ asset('images/logoBlack.png') }}" alt="Your Logo" width="100" height="100">
+            </a>
+        </div>
+        
         <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
                 <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                     <!-- Home -->
-                    <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Home</a></li>
+                    {{-- <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Home</a></li> --}}
         
                     <!-- Shop Dropdown -->
                     <li class="group">
@@ -56,12 +62,6 @@
                 </ul>
             </nav>
         </div>        
-
-        <div class="order-1 md:order-2">
-            <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
-                <img class="fill-current text-gray-800 mr-2" src="{{ asset('images/logoBlack.png') }}" alt="Your Logo" width="100" height="100">
-            </a>
-        </div>
 
         <div class="order-2 md:order-3 flex items-center" id="nav-content">
             @if (Route::has('login'))

@@ -71,21 +71,21 @@
 
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
 
-    @include('header')
+    @include('navigation-menu')
 
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
             <input class="hidden carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('{{asset('images/Slider/1.png')}}');">
 
-                    <div class="container mx-auto">
+                    {{-- <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                             <p class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -95,14 +95,14 @@
             <!--Slide 2-->
             <input class="hidden carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80');">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('{{asset('images/Slider/2.png')}}');">
 
-                    <div class="container mx-auto">
+                    {{-- <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                             <p class="text-black text-2xl my-4">Real Bamboo Wall Clock</p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -112,14 +112,14 @@
             <!--Slide 3-->
             <input class="hidden carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('{{asset('images/Slider/3.png')}}');">
 
-                    <div class="container mx-auto">
+                    {{-- <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                             <p class="text-black text-2xl my-4">Brown and blue hardbound book</p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -222,72 +222,72 @@
         <!-- Product Category 1 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
         <a href="#" class="no-underline hover:no-underline">
-            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 1">
+            <img class="hover:shadow-lg" src="{{asset('images/ProductCategories/Jewelry.png')}}" alt="Product Category 1">
             <div class="pt-3 flex items-center justify-between">
-            <p class="text-gray-900">Crafts</p>
+            <p class="text-gray-900">Jewelry Making</p>
             <!-- Icon or badge here -->
             </div>
-            <p class="pt-1 text-gray-600">Explore Crafts</p>
+            {{-- <p class="pt-1 text-gray-600">Explore Crafts</p> --}}
         </a>
         </div>
     
         <!-- Product Category 2 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
         <a href="#" class="no-underline hover:no-underline">
-            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1508423134147-addf71308178?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 2">
+            <img class="hover:shadow-lg" src="{{asset('images/ProductCategories/Glassbowling.png')}}" alt="Product Category 2">
             <div class="pt-3 flex items-center justify-between">
-            <p class="text-gray-900">Jewelry</p>
+            <p class="text-gray-900">Glassblowing</p>
             <!-- Icon or badge here -->
             </div>
-            <p class="pt-1 text-gray-600">Discover Jewelry</p>
+            {{-- <p class="pt-1 text-gray-600">Discover Jewelry</p> --}}
         </a>
         </div>
     
         <!-- Product Category 3 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
         <a href="#" class="no-underline hover:no-underline">
-            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <img class="hover:shadow-lg" src="{{asset('images/ProductCategories/Gourmet.png')}}" alt="Product Category 3">
             <div class="pt-3 flex items-center justify-between">
-            <p class="text-gray-900">Home Decor</p>
+            <p class="text-gray-900">Gourmet Food and Beverages</p>
             <!-- Icon or badge here -->
             </div>
-            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            {{-- <p class="pt-1 text-gray-600">Fine Home Decor</p> --}}
         </a>
         </div>
     
         <!-- Product Category 4 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             <a href="#" class="no-underline hover:no-underline">
-            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <img class="hover:shadow-lg" src="{{asset('images/ProductCategories/Ceramics.png')}}" alt="Product Category 4">
             <div class="pt-3 flex items-center justify-between">
-                <p class="text-gray-900">Home Decor</p>
+                <p class="text-gray-900">Ceramics and Pottery</p>
                 <!-- Icon or badge here -->
             </div>
-            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            {{-- <p class="pt-1 text-gray-600">Fine Home Decor</p> --}}
             </a>
         </div>
         
         <!-- Product Category 5 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             <a href="#" class="no-underline hover:no-underline">
-            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <img class="hover:shadow-lg" src="{{asset('images/ProductCategories/Textiles.png')}}" alt="Product Category 5">
             <div class="pt-3 flex items-center justify-between">
-                <p class="text-gray-900">Home Decor</p>
+                <p class="text-gray-900">Textiles</p>
                 <!-- Icon or badge here -->
             </div>
-            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            {{-- <p class="pt-1 text-gray-600">Fine Home Decor</p> --}}
             </a>
         </div>
 
         <!-- Product Category 6 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             <a href="#" class="no-underline hover:no-underline">
-            <img class="hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80" alt="Product Category 3">
+            <img class="hover:shadow-lg" src="{{asset('images/ProductCategories/Woodwork.png')}}" alt="Product Category 6">
             <div class="pt-3 flex items-center justify-between">
-                <p class="text-gray-900">Home Decor</p>
+                <p class="text-gray-900">Woodworking and Carpentry</p>
                 <!-- Icon or badge here -->
             </div>
-            <p class="pt-1 text-gray-600">Fine Home Decor</p>
+            {{-- <p class="pt-1 text-gray-600">Fine Home Decor</p> --}}
             </a>
         </div>
     </div>
@@ -318,7 +318,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/GG1.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -331,7 +331,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1508423134147-addf71308178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/GG2.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -344,7 +344,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/JW1.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -357,7 +357,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/JW2.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -370,7 +370,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1467949576168-6ce8e2df4e13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/PT1.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -383,7 +383,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/PT2.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -396,7 +396,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1550837368-6594235de85c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/TT1.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -409,7 +409,7 @@
 
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1551431009-a802eeec77b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80">
+                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/TT2.png')}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">Product Name</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
