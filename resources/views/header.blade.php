@@ -1,28 +1,20 @@
-<!--Nav-->
-<nav id="header" class="w-full z-30 top-0 py-1">
-    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
-
-        <label for="menu-toggle" class="cursor-pointer md:hidden block">
-            <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <title>menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-        </label>
-        <input class="hidden" type="checkbox" id="menu-toggle" />
-
-        <div class="order-1 md:order-2">
-            <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
+<nav id="header" class="w-full z-30 top-0 py-1 bg-white">
+    <div class="w-full container mx-auto flex items-center justify-between px-6 py-3">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="#" class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl">
                 <img class="fill-current text-gray-800 mr-2" src="{{ asset('images/logoBlack.png') }}" alt="Your Logo" width="100" height="100">
             </a>
         </div>
-        
-        <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+
+        <!-- Menus -->
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
             <nav>
-                <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                    <!-- Home -->
-                    {{-- <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Home</a></li> --}}
-        
-                    <!-- Shop Dropdown -->
+                <ul class="md:flex items-center justify-center text-base text-gray-700 pt-4 md:pt-0">
+
+                    <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Home</a></li>
+
                     <li class="group">
                         <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Shop</a>
                         <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
@@ -31,38 +23,20 @@
                             <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Featured Artisans</a></li>
                         </ul>
                     </li>
-        
-                    <!-- Artisans -->
+
                     <li class="group">
-                        <a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Artisans</a>
+                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Artisans</a>
                         <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
                             <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Meet the Artisans</a></li>
                             <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Become an Artisan</a></li>
                         </ul>
                     </li>
-        
-                    <!-- Customer Service Dropdown -->
-                    <li class="group">
-                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Customer Service</a>
-                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
-                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">FAQ</a></li>
-                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Order Tracking</a></li>
-                            <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Return Policy</a></li>
-                        </ul>
-                    </li>
-        
-                    <!-- Legal Dropdown -->
-                    <li class="group">
-                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Legal</a>
-                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
-                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Terms of Service</a></li>
-                            <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Privacy Policy</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
             </nav>
-        </div>        
+        </div>
 
+        <!-- Login and Register -->
         <div class="order-2 md:order-3 flex items-center" id="nav-content">
             @if (Route::has('login'))
                 <div class="sm:top-0 sm:right-0 p-6 text-right z-10">
