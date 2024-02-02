@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Enums\Role;
 
 class UserController extends Controller
 {
@@ -22,7 +23,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.form', [
+            'user' => (new User()),
+            'roles' => Role::cases()
+        ]);
     }
 
     /**
@@ -30,7 +34,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'role' => 'required'
+        ]);
+
+        $validated['password'] = bcrypt('password');
+
+        User::create($validated);
+
+        return redirect()->route('user.index')->with('success', 'User created successfully');
     }
 
     /**
@@ -46,7 +60,10 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('admin.user.form', [
+            'user' => $user,
+            'roles' => Role::cases()
+        ]);
     }
 
     /**
@@ -54,7 +71,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'role' => 'required'
+        ]);
+
+        $user->update($validated);
+
+        return redirect()->route('user.index')->with('success', 'User updated successfully');
     }
 
     /**
