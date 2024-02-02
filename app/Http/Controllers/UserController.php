@@ -12,7 +12,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.user.index', [
+            'users' => User::paginate(10)
+        ]);
     }
 
     /**
@@ -60,6 +62,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('user.index')->with('success', 'User deleted successfully');
     }
 }
