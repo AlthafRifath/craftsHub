@@ -32,4 +32,14 @@ Route::middleware([
         \App\Http\Controllers\UserController::class
     );
 
+    Route::resource(
+        'product-category',
+        \App\Http\Controllers\ProductCategoryController::class
+    );
+
+    Route::resource(
+        'product',
+        \App\Http\Controllers\ProductController::class
+    );
+
 });

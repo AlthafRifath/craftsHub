@@ -100,7 +100,7 @@
                                 {{ __('Manage Products') }}
                             </div>
 
-                            <x-dropdown-link href=""> <!-- Create the product category CRUD and put the route here -->
+                            <x-dropdown-link href="{{ route('product-category.index') }}">
                                 {{ __('Categories') }}
                             </x-dropdown-link>
 
