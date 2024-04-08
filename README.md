@@ -1,7 +1,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></p>
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/xxxxx/jetstream-logo.svg" width="200" alt="Jetstream Logo">
+    <img src="https://picperf.io/https://laravelnews.s3.amazonaws.com/images/jetstream.png" width="200" alt="Jetstream Logo">
     <img src="https://user-images.githubusercontent.com/xxxxx/tailwindcss-logo.svg" width="200" alt="Tailwind CSS Logo">
     <img src="https://user-images.githubusercontent.com/xxxxx/spatie-logo.svg" width="200" alt="Spatie Logo">
     <img src="https://user-images.githubusercontent.com/xxxxx/vite-logo.svg" width="200" alt="Vite Logo">
