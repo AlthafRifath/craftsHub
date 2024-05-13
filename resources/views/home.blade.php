@@ -7,46 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>craftsHub</title>
     <meta name="description" content="Artisan Marketplace">
-    
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://unpkg.com/alpinejs" defer></script>
-	
+
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 
     <style>
         .work-sans {
             font-family: 'Work Sans', sans-serif;
         }
-                
+
         #menu-toggle:checked + #menu {
             display: block;
         }
-        
+
         .hover\:grow {
             transition: all 0.3s;
             transform: scale(1);
         }
-        
+
         .hover\:grow:hover {
             transform: scale(1.02);
         }
-        
+
         .carousel-open:checked + .carousel-item {
             position: static;
             opacity: 100;
         }
-        
+
         .carousel-item {
             -webkit-transition: opacity 0.6s ease-out;
             transition: opacity 0.6s ease-out;
         }
-        
+
         #carousel-1:checked ~ .control-1,
         #carousel-2:checked ~ .control-2,
         #carousel-3:checked ~ .control-3 {
             display: block;
         }
-        
+
         .carousel-indicators {
             list-style: none;
             margin: 0;
@@ -58,7 +58,7 @@
             text-align: center;
             z-index: 10;
         }
-        
+
         #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
         #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
         #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
@@ -73,6 +73,7 @@
 
     @include('header')
 
+{{--    Slider Section--}}
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
@@ -142,6 +143,8 @@
         </div>
     </div>
     <br>
+
+{{--    Features Section--}}
     <section>
         <div class="bg-transparent text-gray-400 text-xs font-sans box-border p-0 m-0 mx-auto block clear-both w-full md:w-[1188px] mt-6 pt-0">
             <div class="p-0">
@@ -196,9 +199,10 @@
                 </li> --}}
               </ul>
             </div>
-          </div>                                       
+          </div>
     </section>
 
+{{--    Product Categories--}}
     <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
         <nav id="store" class="w-full z-30 top-0 px-6 py-1">
             <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
@@ -230,7 +234,7 @@
             {{-- <p class="pt-1 text-gray-600">Explore Crafts</p> --}}
         </a>
         </div>
-    
+
         <!-- Product Category 2 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
         <a href="#" class="no-underline hover:no-underline">
@@ -242,7 +246,7 @@
             {{-- <p class="pt-1 text-gray-600">Discover Jewelry</p> --}}
         </a>
         </div>
-    
+
         <!-- Product Category 3 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
         <a href="#" class="no-underline hover:no-underline">
@@ -254,7 +258,7 @@
             {{-- <p class="pt-1 text-gray-600">Fine Home Decor</p> --}}
         </a>
         </div>
-    
+
         <!-- Product Category 4 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             <a href="#" class="no-underline hover:no-underline">
@@ -266,7 +270,7 @@
             {{-- <p class="pt-1 text-gray-600">Fine Home Decor</p> --}}
             </a>
         </div>
-        
+
         <!-- Product Category 5 -->
         <div class="w-full md:w-1/3 xl:w-1/6 p-6 flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             <a href="#" class="no-underline hover:no-underline">
@@ -291,8 +295,8 @@
             </a>
         </div>
     </div>
-  
 
+{{--    Featured Products--}}
     <section class="bg-white py-8">
 
         <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
@@ -316,114 +320,118 @@
               </div>
             </nav>
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/GG1.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+            @foreach($products as $product)
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-lg" src="{{$product->image}}">
+                        <div class="pt-3 flex-col items-start justify-between">
+                            <p class="text-xl font-semibold">{{$product->name}}</p>
+                            <p class="text-sm text-gray-600 mt-1">{{$product->description}}</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-900 text-lg">රු {{$product->price}}</p>
+                    </a>
+                </div>
+            @endforeach
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/GG2.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/GG2.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/JW1.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/JW1.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/JW2.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/JW2.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/PT1.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/PT1.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/PT2.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/PT2.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/TT1.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/TT1.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/TT2.png')}}">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">රු9.99</p>
-                </a>
-            </div>
+{{--            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">--}}
+{{--                <a href="#">--}}
+{{--                    <img class="hover:grow hover:shadow-lg" src="{{asset('images/Products/TT2.png')}}">--}}
+{{--                    <div class="pt-3 flex items-center justify-between">--}}
+{{--                        <p class="">Product Name</p>--}}
+{{--                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">--}}
+{{--                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />--}}
+{{--                        </svg>--}}
+{{--                    </div>--}}
+{{--                    <p class="pt-1 text-gray-900">රු9.99</p>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
             </div>
 
     </section>
 
+{{--    About Us--}}
     <section class="bg-white py-8">
 
         <div class="container py-8 px-6 mx-auto">
@@ -437,7 +445,7 @@
                 We believe in the power of local craftsmanship and the unique stories behind each creation. By bringing these artisans to a wider audience, we aim to not only showcase their talents but also sustain the rich cultural heritage they represent.
                 <br><br>
                 Our platform is more than just a marketplace; it's a comprehensive ecosystem equipped with a Customer Relationship Management (CRM) system. This system streamlines the management of customer and vendor interactions, orders, and a diverse range of product offerings. It ensures a seamless and efficient experience for both artisans and their customers.
-                
+
                 Join us at LocalCrafts Hub, where each purchase is a step towards nurturing the local craft community and preserving the artistry and skills that make each piece unique.</p>
 
         </div>
