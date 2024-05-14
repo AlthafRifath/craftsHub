@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -15,6 +16,13 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Ensure that only authenticated users can access the 'add-to-cart' route
+Route::middleware(['auth'])->group(function () {
+    Route::get('add-to-cart/{product}', [CartController::class, 'add'])->name('cart.add');
+});
+
+Route::get('cart', [CartController::class, 'index'])->name('cart.index');
 
 Route::middleware([
     'auth:sanctum',
