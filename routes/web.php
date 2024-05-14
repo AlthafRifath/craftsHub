@@ -24,6 +24,10 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('cart', [CartController::class, 'index'])->name('cart.index');
 
+Route::get('cart/destroy/{itemId}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+Route::get('cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

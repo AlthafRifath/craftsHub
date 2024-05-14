@@ -75,7 +75,42 @@
 
 <h2 class="text-2xl font-semibold py-8 text-center">Shopping Cart</h2>
 
-{{ dd(Cart::session(auth()->id())->getContent()) }}
+{{--{{ dd(Cart::session(auth()->id())->getContent()) }}--}}
+
+<table>
+    <thead>
+    <tr>
+        <th class="px-4 py-2">Product</th>
+        <th class="px-4 py-2">Price</th>
+        <th class="px-4 py-2">Quantity</th>
+        <th class="px-4 py-2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($cartItems as $item)
+        <tr>
+            <td class="border px-4 py-2">{{ $item->name }}</td>
+            <td class="border px-4 py-2">
+                {{ Cart::session(auth()->id())->get($item->id)->getPriceSum() }}
+            </td>
+            <td class="border px-4 py-2">
+                <form action="{{ route('cart.update', $item->id) }}">
+                    <input name="quantity" type="number" value="{{ $item->quantity }}">
+                    <input type="submit" value="Save">
+                </form>
+            </td>
+            <td>
+                <a href="{{ route('cart.destroy', $item->id) }}">Delete</a>
+            </td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>
+
+<div>
+    <h3>Total: ${{ Cart::session(auth()->id())->getTotal() }}</h3>
+    <a href="">Proceed to Checkout</a>
+</div>
 
 @include('footer')
 
