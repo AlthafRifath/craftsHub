@@ -73,9 +73,62 @@
 
 @include('header')
 
-<h2>Checkout</h2>
+<section class="bg-white py-12 px-6 antialiased">
+    <div class="mx-auto max-w-4xl">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Checkout</h2>
 
-<h3>Shipping Information</h3>
+        <h3 class="text-lg font-medium text-gray-700 mb-4">Shipping Information</h3>
+
+        <form action="{{ route('orders.store') }}" method="post" class="bg-white p-8 shadow-lg rounded-lg">
+            @csrf
+
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Full Name -->
+                <div>
+                    <label for="shipping_fullname" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" name="shipping_fullname" id="shipping_fullname" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+
+                <!-- State -->
+                <div>
+                    <label for="shipping_state" class="block text-sm font-medium text-gray-700">State</label>
+                    <input type="text" name="shipping_state" id="shipping_state" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+
+                <!-- City -->
+                <div>
+                    <label for="shipping_city" class="block text-sm font-medium text-gray-700">City</label>
+                    <input type="text" name="shipping_city" id="shipping_city" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+
+                <!-- Zip Code -->
+                <div>
+                    <label for="shipping_zipcode" class="block text-sm font-medium text-gray-700">Zip</label>
+                    <input type="text" name="shipping_zipcode" id="shipping_zipcode" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+
+                <!-- Full Address -->
+                <div>
+                    <label for="shipping_address" class="block text-sm font-medium text-gray-700">Full Address</label>
+                    <input type="text" name="shipping_address" id="shipping_address" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+
+                <!-- Mobile -->
+                <div>
+                    <label for="shipping_phone" class="block text-sm font-medium text-gray-700">Mobile</label>
+                    <input type="text" name="shipping_phone" id="shipping_phone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="mt-4 w-full inline-flex justify-center py-3 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                        Place Order
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
 
 @include('footer')
 

@@ -55,4 +55,9 @@ Route::middleware([
         \App\Http\Controllers\ProductController::class
     );
 
+    Route::resource(
+        'orders',
+        \App\Http\Controllers\OrderController::class
+    );
+
 });
