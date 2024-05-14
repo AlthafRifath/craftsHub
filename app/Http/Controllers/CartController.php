@@ -63,4 +63,15 @@ class CartController extends Controller
 
         return redirect()->route('cart.index');
     }
+
+    public function checkout()
+    {
+        // Get the cart instance for the current user session
+        $cart = app('cart'); // This gets the cart instance from the Laravel service container
+
+        // Get the items in the cart
+        $cartItems = $cart->session(auth()->id())->getContent();
+
+        return view('cart.checkout', ['cartItems' => $cartItems]);
+    }
 }

@@ -28,6 +28,8 @@ Route::get('cart/destroy/{itemId}', [CartController::class, 'destroy'])->name('c
 
 Route::get('cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update');
 
+Route::get('cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
