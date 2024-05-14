@@ -73,7 +73,41 @@
 
     @include('header')
 
-{{--    Slider Section--}}
+    @if(session('success_message'))
+        <div class="rounded-md bg-green-50 p-4 mb-4">
+            <div class="flex items-center justify-center">
+                <div class="flex-shrink-0">
+                    <!-- Success Icon -->
+                    <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414L9 9.586 7.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-green-800 text-center">
+                        {{ session('success_message') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    @elseif(session('error_message'))
+        <div class="rounded-md bg-red-50 p-4 mb-4">
+            <div class="flex items-center justify-center">
+                <div class="flex-shrink-0">
+                    <!-- Error Icon -->
+                    <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-9-3a1 1 0 112 0v4a1 1 0 11-2 0V7zm0 6a1 1 0 110-2 1 1 0 010 2z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-red-800 text-center">
+                        {{ session('error_message') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    @endif
+
+    {{--    Slider Section--}}
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->

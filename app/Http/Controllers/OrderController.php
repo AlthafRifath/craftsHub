@@ -87,7 +87,7 @@ class OrderController extends Controller
         $cart->session(auth()->id())->clear();
 
         // Take the user to the thank you page
-        return "Order has been placed successfully!";
+        return redirect()->route('home')->with('success_message', 'Order has been placed successfully!');
 
 //        dd('Order has been placed successfully!',$order);
 
