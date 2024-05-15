@@ -3,6 +3,7 @@
 use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +61,9 @@ Route::middleware([
         \App\Http\Controllers\OrderController::class
     );
 
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });

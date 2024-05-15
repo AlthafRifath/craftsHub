@@ -19,16 +19,16 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
-            <div>
-                <label for="role" class="block font-medium text-sm text-gray-700">Role</label>
-                <select id="role" name="role" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    @foreach(\App\Enums\Role::cases() as $role)
-                        @if($role !== \App\Enums\Role::Admin)
-                            <option value="{{ $role->value }}">{{ $role->name }}</option>
-                        @endif
-                    @endforeach
-                </select>
-            </div>
+{{--            <div>--}}
+{{--                <label for="role" class="block font-medium text-sm text-gray-700">Role</label>--}}
+{{--                <select id="role" name="role" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">--}}
+{{--                    @foreach(\App\Enums\Role::cases() as $role)--}}
+{{--                        @if($role !== \App\Enums\Role::Admin)--}}
+{{--                            <option value="{{ $role->value }}">{{ $role->name }}</option>--}}
+{{--                        @endif--}}
+{{--                    @endforeach--}}
+{{--                </select>--}}
+{{--            </div>--}}
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
