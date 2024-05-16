@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\PayPalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use TCG\Voyager\Facades\Voyager;
@@ -30,6 +31,12 @@ Route::get('cart/destroy/{itemId}', [CartController::class, 'destroy'])->name('c
 Route::get('cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update');
 
 Route::get('cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+
+Route::get('paypal/checkout', [PayPalController::class, 'getExpressCheckout'])->name('paypal.checkout');
+
+Route::get('paypal/checkout-success', [PayPalController::class, 'getExpressCheckoutSuccess'])->name('paypal.success');
+
+Route::get('paypal/checkout-cancel', [PayPalController::class, 'cancelPage'])->name('paypal.cancel');
 
 Route::middleware([
     'auth:sanctum',

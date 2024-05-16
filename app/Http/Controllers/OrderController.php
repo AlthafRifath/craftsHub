@@ -83,6 +83,11 @@ class OrderController extends Controller
             ]);
         }
 
+        // Payment
+        if ($request->payment_method == 'paypal') {
+            return redirect()->route('paypal.checkout');
+        }
+
         // Clear the cart
         $cart->session(auth()->id())->clear();
 
