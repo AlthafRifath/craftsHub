@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use TCG\Voyager\Facades\Voyager;
@@ -37,6 +38,10 @@ Route::get('paypal/checkout', [PayPalController::class, 'getExpressCheckout'])->
 Route::get('paypal/checkout-success', [PayPalController::class, 'getExpressCheckoutSuccess'])->name('paypal.success');
 
 Route::get('paypal/checkout-cancel', [PayPalController::class, 'cancelPage'])->name('paypal.cancel');
+
+Route::get('shops', [ShopController::class, 'create'])->name('shops.create');
+
+Route::post('shops', [ShopController::class, 'store'])->name('shops.store');
 
 Route::middleware([
     'auth:sanctum',
