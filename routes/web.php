@@ -39,9 +39,10 @@ Route::get('paypal/checkout-success', [PayPalController::class, 'getExpressCheck
 
 Route::get('paypal/checkout-cancel', [PayPalController::class, 'cancelPage'])->name('paypal.cancel');
 
-Route::get('shops', [ShopController::class, 'create'])->name('shops.create');
-
-Route::post('shops', [ShopController::class, 'store'])->name('shops.store');
+Route::middleware(['auth'])->group(function () {
+    Route::get('shops', [ShopController::class, 'create'])->name('shops.create');
+    Route::post('shops', [ShopController::class, 'store'])->name('shops.store');
+});
 
 Route::middleware([
     'auth:sanctum',
