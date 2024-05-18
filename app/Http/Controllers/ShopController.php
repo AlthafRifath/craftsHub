@@ -49,7 +49,7 @@ class ShopController extends Controller
      */
     public function show(Shop $shop)
     {
-        //
+        dd($shop->owner->name. ' Welcome to your shop ', $shop->name);
     }
 
     /**
