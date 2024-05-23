@@ -17,7 +17,10 @@ class ShopFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'is_active' => true,
+            'description' => $this->faker->text,
+            'rating' => $this->faker->randomFloat(2, 0, 5),
         ];
     }
 }

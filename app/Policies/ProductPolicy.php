@@ -8,59 +8,44 @@ use Illuminate\Auth\Access\Response;
 
 class ProductPolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(User $user): bool
+    public function before($user, $ability)
     {
-        //
+        if ($user->hasRole('admin')) {
+            return true;
+        }
     }
 
-    /**
-     * Determine whether the user can view the model.
-     */
-    public function view(User $user, Product $product): bool
+    public function browse(User $user)
     {
-        //
+        return $user->hasRole('vendor');
     }
 
-    /**
-     * Determine whether the user can create models.
-     */
-    public function create(User $user): bool
+    public function read(User $user, Product $product)
     {
-        //
+        if (empty($product->shop)) {
+            return false;
+        }
+        return $user->id == $product->shop->user_id;
     }
 
-    /**
-     * Determine whether the user can update the model.
-     */
-    public function update(User $user, Product $product): bool
+    public function add(User $user)
     {
-        //
+        return $user->hasRole('vendor');
     }
 
-    /**
-     * Determine whether the user can delete the model.
-     */
-    public function delete(User $user, Product $product): bool
+    public function edit(User $user, Product $product)
     {
-        //
+        if (empty($product->shop)) {
+            return false;
+        }
+        return $user->id == $product->shop->user_id;
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, Product $product): bool
+    public function delete(User $user, Product $product)
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, Product $product): bool
-    {
-        //
+        if (empty($product->shop)) {
+            return false;
+        }
+        return $user->id == $product->shop->user_id;
     }
 }
