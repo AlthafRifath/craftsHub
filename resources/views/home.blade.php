@@ -354,10 +354,10 @@
             </nav>
             @foreach($products as $product)
                 <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <img class="hover:grow hover:shadow-lg" src="{{$product->image}}">
+                    <img class="hover:grow hover:shadow-lg" src="{{ asset('storage/' . str_replace('\\', '/', $product->image)) }}">
                     <div class="pt-3 flex-col items-start justify-between">
                         <p class="text-xl font-semibold">{{$product->name}}</p>
-                        <p class="text-sm text-gray-600 mt-1">{{$product->description}}</p>
+                        <p class="text-sm text-gray-600 mt-1">{{ strip_tags($product->description) }}</p>
                         <p class="pt-1 text-gray-900 text-lg">රු {{$product->price}}</p>
                     </div>
                     <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

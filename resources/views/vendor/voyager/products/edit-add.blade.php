@@ -80,7 +80,8 @@
                                     @elseif ($row->type == 'relationship')
 
                                         @if($row->display_name == 'shops' && auth()->user()->hasRole('vendor'))
-                                            {{auth()->user()->shop->name}}
+                                            {{auth()->user()->shop->name ?? 'n/a'}}
+                                            <input type="hidden" name="shop_id" value="{{auth()->user()->shop->id}}">
                                         @else
                                             @include('voyager::formfields.relationship', ['options' => $row->details])
                                         @endif
