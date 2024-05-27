@@ -17,19 +17,19 @@
 
                     <li class="group">
                         <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Shop</a>
-                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
-                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Categories</a></li>
-                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">New Arrivals</a></li>
-                            <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Featured Artisans</a></li>
-                        </ul>
+{{--                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">--}}
+{{--                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Categories</a></li>--}}
+{{--                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">New Arrivals</a></li>--}}
+{{--                            <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Featured Artisans</a></li>--}}
+{{--                        </ul>--}}
                     </li>
 
                     <li class="group">
-                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="#">Artisans</a>
-                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
-                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Meet the Artisans</a></li>
-                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{{route('shops.create')}}">Become an Artisan</a></li>
-                        </ul>
+                        <a class="inline-block no-underline hover:text-black py-2 px-4" href="{{route('shops.create')}}">Become an Artisan</a>
+{{--                        <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">--}}
+{{--                            <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Meet the Artisans</a></li>--}}
+{{--                            <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{{route('shops.create')}}">Become an Artisan</a></li>--}}
+{{--                        </ul>--}}
                     </li>
 
                 </ul>
